@@ -1,4 +1,5 @@
 FROM java:7-jdk
-RUN cd /src/
+COPY /src/ /test/src/
+RUN cd /test/src/
 RUN javac com/abdul/docker/sample/HelloWorld.java
 CMD["java","com.abdul.docker.sample.HelloWorld"]
